@@ -34,7 +34,7 @@ JOIN address a ON s.address_id = a.address_id
 GROUP BY c.store_id 
 HAVING COUNT(c.store_id) > 300;
 ```
-![t1]()
+![t1](https://github.com/Toazter426/sql-2-hw/blob/main/img/sql_2_1.png)
 Одним запросом получите информацию о магазине, в котором обслуживается более 300 покупателей, и выведите в результат следующую информацию: 
 - фамилия и имя сотрудника из этого магазина;
 - город нахождения магазина;
@@ -47,7 +47,7 @@ HAVING COUNT(c.store_id) > 300;
 SELECT  COUNT(1) AS 'above AVG films'
 FROM film  WHERE `length` > (SELECT AVG(`length`) from film) ;
 ```
-![t2]()
+![t2](https://github.com/Toazter426/sql-2-hw/blob/main/img/sql_2_2.png)
 ### Задание 3
 
 Получите информацию, за какой месяц была получена наибольшая сумма платежей, и добавьте информацию по количеству аренд за этот месяц.
@@ -57,5 +57,5 @@ FROM payment
 GROUP BY MONTH(payment_date) 
 ORDER BY COUNT(payment_id)  DESC LIMIT 1 ;
 ```
-![t3]()
+![t3](https://github.com/Toazter426/sql-2-hw/blob/main/img/sql_2_3.png)
 
